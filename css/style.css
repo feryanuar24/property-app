@@ -1,0 +1,173 @@
+/* Color Palette */
+:root {
+  --primary-color: #3498db; /* Light Blue */
+  ----background-color: #ecf0f1; /* Light Gray */
+  --text-color: #2c3e50; /* Dark Gray */
+  --accent-color: #e74c3c; /* Red */
+  --light-gray: #bdc3c7; /* Light Gray */
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  color: var(--primary-color);
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: var(--text-color);
+  margin-left: 100px;
+}
+
+.nav-item:hover {
+  color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.hero {
+  padding: 30px 50px;
+  display: flex;
+  align-items: center;
+  animation: fade-in-up 1s ease-in-out;
+}
+
+.hero-text {
+  color: var(--text-color);
+  margin-right: 300px;
+}
+
+.kontak-kami {
+  padding: 15px 50px;
+  display: flex;
+  align-items: center;
+  background-color: var(--accent-color);
+  color: var(----background-color);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin-right: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.kontak-kami:hover {
+  background-color: #c0392b;
+}
+
+.info-detail {
+  padding: 15px 50px;
+  display: flex;
+  align-items: center;
+  background-color: var(--light-gray);
+  color: var(--background-color);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.info-detail:hover {
+  background-color: #95a5a6;
+}
+
+.btn-group {
+  display: flex;
+  margin-top: 20px;
+}
+
+.hero-img {
+  border-radius: 30px;
+}
+
+.fasilitas-list {
+  padding: 30px 50px;
+  color: var(--text-color);
+}
+
+.fasilitas-item:nth-child(odd) {
+  animation: fade-in-right 3s linear;
+}
+
+.fasilitas-list:nth-child(even) {
+  animation: fade-in-left 3s linear;
+}
+
+.fasilitas-title {
+  font-size: xx-large;
+  border-bottom: var(--primary-color) 10px solid;
+  width: max-content;
+}
+
+.fasilitas-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.fasilitas-img {
+  border-radius: 30px;
+  margin: 0px 50px;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 92.5%;
+  background-color: var(--light-gray);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.active {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
