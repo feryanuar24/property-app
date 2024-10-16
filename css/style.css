@@ -1,4 +1,4 @@
-/* Color Palette */
+/* Start: Color Palette */
 :root {
   --primary-color: #3498db; /* Light Blue */
   ----background-color: #ecf0f1; /* Light Gray */
@@ -6,14 +6,18 @@
   --accent-color: #e74c3c; /* Red */
   --light-gray: #bdc3c7; /* Light Gray */
 }
+/* End: Color Palette */
 
+/* Start: Global */
 body {
   background-color: #f0f0f0;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
+/* End: Global */
 
+/* Start: Header */
 header {
   color: var(--primary-color);
   padding: 10px 50px;
@@ -38,6 +42,12 @@ header {
   transition: all 0.3s ease-in-out;
 }
 
+.icon-list {
+  display: none;
+}
+/* End: Header */
+
+/* Start: Hero */
 .hero {
   padding: 30px 50px;
   display: flex;
@@ -94,7 +104,9 @@ header {
 .hero-img {
   border-radius: 30px;
 }
+/* End: Hero */
 
+/* Start: Fasilitas List */
 .fasilitas-list {
   padding: 30px 50px;
   color: var(--text-color);
@@ -124,21 +136,136 @@ header {
   border-radius: 30px;
   margin: 0px 50px;
 }
+/* End: Fasilitas List */
 
-.fixed {
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  width: 92.5%;
-  background-color: var(--light-gray);
+/* Start: About Us */
+.about-us-content {
+  background-color: var(--primary-color);
+  color: var(----background-color);
+  margin: 100px;
+  border-radius: 10px;
+  padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--light-gray);
 }
+/* End: About Us */
 
-.active {
-  color: var(--primary-color);
+/* Start: Icon text */
+.contact-icon {
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: var(--text-color);
   font-weight: bold;
+  font-size: large;
 }
 
+.icon-item {
+  font-size: 50px;
+  color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.icon-text {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.icon-text:hover {
+  color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+/* End: Icon text */
+
+/* Start: Contact Form Map */
+.contact-form-map {
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.contact-form {
+  background-color: var(--light-gray);
+  height: 450px;
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-right: 30px;
+}
+
+.contact-form-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-input-text {
+  border: none;
+  height: 30px;
+  border-radius: 3px;
+  padding: 0 10px;
+  transition: all 0.3s ease-in-out;
+  margin: 10px 0;
+}
+
+.contact-form-input-text:focus {
+  outline: none;
+  border: 3px solid var(--primary-color);
+}
+
+.contact-form-input-textarea {
+  border: none;
+  height: 80px;
+  border-radius: 3px;
+  padding: 10px;
+  transition: all 0.1s ease-in-out;
+  margin: 10px 0;
+}
+
+.contact-form-input-textarea:focus {
+  outline: none;
+  border: 3px solid var(--primary-color);
+}
+
+.contact-form-btn {
+  background-color: var(--primary-color);
+  color: var(----background-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 10px 0;
+}
+
+.contact-form-btn:hover {
+  background-color: #2980b9;
+}
+
+.contact-map {
+  width: 50%;
+  height: 450px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+/* End: Contact Form Map */
+
+/* Start: Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(----background-color);
+  font-weight: bold;
+  padding: 20px 50px;
+  text-align: center;
+}
+/* End: Footer */
+
+/* Keyframes */
 @keyframes fade-in-up {
   from {
     opacity: 0;
@@ -171,3 +298,156 @@ header {
     transform: translateX(0);
   }
 }
+
+/* Responsive */
+@media (max-width: 360px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  header {
+    padding: 10px 15px;
+  }
+
+  .logo-app {
+    font-size: 20px;
+  }
+
+  .nav-list {
+    position: absolute;
+    display: none;
+    right: 15px;
+    top: 50px;
+    text-align: end;
+    background-color: var(--light-gray);
+    border-radius: 10px;
+  }
+
+  .nav-item {
+    margin: 0;
+    padding: 10px 15px;
+    display: block;
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  .icon-list {
+    font-size: 20px;
+    color: var(--text-color);
+    border: var(--text-color) 1px solid;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: block;
+  }
+
+  .icon-list:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .hero-text {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .kontak-kami {
+    height: 40px;
+  }
+
+  .info-detail {
+    height: 40px;
+  }
+
+  .hero-img {
+    width: 300px;
+  }
+
+  .fasilitas-list {
+    padding: 30px 15px;
+  }
+
+  .fasilitas-title {
+    font-size: x-large;
+  }
+
+  .fasilitas-item {
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  .fasilitas-img {
+    width: 300px;
+  }
+
+  .fasilitas-item:nth-child(odd) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 10px 0px;
+  }
+
+  .about-us-content {
+    margin: 10px;
+  }
+
+  .contact-icon {
+    flex-direction: column;
+  }
+
+  .contact-form-map {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    width: 100%;
+    height: 500px;
+    margin-left: 40px;
+  }
+
+  .contact-map {
+    width: 120%;
+    height: 500px;
+    margin-top: 50px;
+  }
+}
+
+/* Start: Other */
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 92.5%;
+  background-color: var(--light-gray);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.active {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.banner {
+  background-image: url("../assets/images/banner-img.png");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(----background-color);
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+/* End: Other */
