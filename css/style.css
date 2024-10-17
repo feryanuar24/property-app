@@ -605,6 +605,10 @@ footer {
     margin-left: -25px;
     width: 300px;
   }
+
+  .flex-direction-row-reverse {
+    flex-direction: column !important;
+  }
 }
 
 /* Start: Other */
@@ -642,6 +646,10 @@ footer {
 
 .mr {
   margin-right: -50px;
+}
+
+.flex-direction-row-reverse {
+  flex-direction: row-reverse;
 }
 
 /* End: Other */
