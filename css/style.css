@@ -371,6 +371,127 @@ header {
 }
 /* End: List Tipe Rumah */
 
+/* Start: Detail Rumah */
+.detail-rumah-main {
+  display: flex;
+  margin: 50px 80px;
+  color: var(--text-color);
+  animation: fade-in-right 3s ease-in-out;
+}
+
+.detail-rumah-img {
+  width: 500px;
+  border-radius: 30px;
+}
+
+.detail-rumah-text-group {
+  margin-left: 50px;
+}
+
+.detail-rumah-title {
+  font-size: xx-large;
+  margin-bottom: 20px;
+}
+
+.detail-rumah-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.detail-rumah-item {
+  background-color: var(--primary-color);
+  color: var(----background-color);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.detail-rumah-kontak {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 200px;
+  margin-left: 100px;
+  color: var(--text-color);
+  animation: fade-in-left 3s ease-in-out;
+}
+
+.detail-rumah-denah {
+  width: 600px;
+  border-radius: 10px;
+}
+
+.detail-rumah-kontak-text {
+  margin-right: 300px;
+}
+
+.kontak-item {
+  display: flex;
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  align-items: center;
+  width: 200px;
+  color: var(----background-color);
+  font-weight: bold;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.kontak-item:hover {
+  background-color: #2980b9;
+}
+
+.fa-envelope {
+  margin-right: 10px;
+}
+
+.detail-rumah-kontak-title {
+  font-size: xx-large;
+}
+
+.lainnya {
+  margin: 200px 50px;
+  text-align: center;
+  color: var(--text-color);
+  font-size: large;
+  animation: fade-in-up 3s ease-in-out;
+}
+
+.lainnya-img {
+  width: 300px;
+  border-radius: 30px;
+}
+
+.lainnya-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.lainnya-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-to-lainnya {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: x-large;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.link-to-lainnya:hover {
+  color: #2980b9;
+}
+/* End: Detail Rumah */
+
 /* Start: Footer */
 footer {
   background-color: var(--primary-color);
@@ -608,6 +729,78 @@ footer {
 
   .flex-direction-row-reverse {
     flex-direction: column !important;
+  }
+
+  .tipe-rumah-container-group {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tipe-rumah-container-item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+  }
+
+  .detail-rumah-main {
+    display: block;
+    margin-left: 0;
+  }
+
+  .detail-rumah-img {
+    width: 300px;
+    margin-left: 20px;
+  }
+
+  .detail-rumah-text-group {
+    margin-left: 20px;
+    width: 300px;
+    text-align: justify;
+  }
+
+  .detail-rumah-grid {
+    display: block;
+  }
+
+  .detail-rumah-item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .detail-rumah-item i {
+    margin-right: 20px;
+  }
+
+  .detail-rumah-kontak {
+    display: block;
+    margin-left: 20px;
+    margin-top: 50px;
+  }
+
+  .detail-rumah-denah {
+    width: 300px;
+  }
+
+  .detail-rumah-kontak-text {
+    width: 300px;
+  }
+
+  .kontak-item {
+    width: 270px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .lainnya {
+    margin: 100px 20px;
+  }
+
+  .lainnya-grid {
+    display: flex;
+    flex-direction: column;
   }
 }
 
