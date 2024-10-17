@@ -26,14 +26,17 @@
     <main>
       <section class="hero">
         <div class="hero-text">
-          <h2>Selamat Datang di Property APP</h2>
-          <p>
+          <h2 class="hero-title">Selamat Datang di Property APP</h2>
+          <p class="hero-detail">
             Property APP adalah aplikasi yang menyediakan informasi tentang
             properti yang dijual. Anda dapat melihat informasi tentang tipe
             rumah yang dijual, harga rumah, dan lokasi rumah.
           </p>
           <div class="btn-group">
-            <button class="kontak-kami">Kontak Kami</button>
+            <button class="kontak-kami">
+              <i class="fa-solid fa-phone"></i>
+              <p>Kontak Kami</p>
+            </button>
             <button class="info-detail">Info Detail</button>
           </div>
         </div>
@@ -41,105 +44,128 @@
           <img
             src="assets/images/hero-img.png"
             alt="Gambar Utama"
-            width="500px"
+            width="600px"
             class="hero-img"
           />
         </div>
       </section>
-      <section class="fasilitas-list">
+      <section>
         <h2 class="fasilitas-title">Fasilitas Kami</h2>
-        <article class="fasilitas-item">
-          <div>
-            <h3>Keamanan Terjamin</h3>
-            <p>
-              Keamanan adalah prioritas kami. Kami menyediakan CCTV di seluruh
-              area perumahan.
-            </p>
-          </div>
-          <figure>
-            <img
-              src="assets/images/keamanan.jpg"
-              alt="CCTV"
-              width="500px"
-              class="fasilitas-img"
-            />
-          </figure>
-        </article>
-        <article class="fasilitas-item">
-          <figure>
-            <img
-              src="assets/images/kolam-renang.jpg"
-              alt="Kolam Renang"
-              width="500px"
-              class="fasilitas-img"
-            />
-          </figure>
-          <div>
-            <h3>Kolam Renang Luas</h3>
-            <p>
-              Nikmati kolam renang luas yang kami sediakan. Kolam renang kami
-              dilengkapi dengan fasilitas yang memadai.
-            </p>
-          </div>
-        </article>
-        <article class="fasilitas-item">
-          <div>
-            <h3>Pusat Kebugaran Modern</h3>
-            <p>
-              Anda dapat berolahraga di pusat kebugaran modern yang kami
-              sediakan. Pusat kebugaran kami dilengkapi dengan alat-alat
-              olahraga yang lengkap.
-            </p>
-          </div>
-          <figure>
-            <img
-              src="assets/images/pusat-kebugaran.jpg"
-              alt="Pusat Kebugaran"
-              width="500px"
-              class="fasilitas-img"
-            />
-          </figure>
-        </article>
-        <article class="fasilitas-item">
-          <figure>
-            <img
-              src="assets/images/resto.jpg"
-              alt="Restoran dan Cafe"
-              width="500px"
-              class="fasilitas-img"
-            />
-          </figure>
-          <div>
-            <h3>Restoran dan Cafe</h3>
-            <p>
-              Anda dapat menikmati makanan dan minuman di restoran dan cafe yang
-              kami sediakan. Restoran dan cafe kami menyediakan berbagai macam
-              makanan dan minuman.
-            </p>
-          </div>
-        </article>
-        <article class="fasilitas-item">
-          <div>
-            <h3>Ruang Terbuka Hijau</h3>
-            <p>
-              Nikmati ruang terbuka hijau yang kami sediakan. Ruang terbuka
-              hijau kami sangat luas dan nyaman untuk berjalan-jalan atau
-              berolahraga.
-            </p>
-          </div>
-          <figure>
-            <img
-              src="assets/images/ruang-terbuka.jpg"
-              alt="Ruang Terbuka Hijau"
-              width="500px"
-              class="fasilitas-img"
-            />
-          </figure>
-        </article>
+        <div class="fasilitas-list">
+          <article class="fasilitas-item">
+            <div>
+              <h3 class="fasilitas-item-title">Keamanan Terjamin</h3>
+                <p class="fasilitas-item-desc">
+                Keamanan adalah prioritas kami. Kami menyediakan CCTV di seluruh
+                area perumahan untuk memastikan keamanan dan kenyamanan Anda. 
+                Selain itu, kami juga memiliki petugas keamanan yang berjaga 24 jam 
+                setiap hari untuk memberikan perlindungan ekstra bagi Anda dan keluarga.
+                </p>
+            </div>
+            <figure>
+              <img
+                src="assets/images/keamanan.jpg"
+                alt="CCTV"
+                class="fasilitas-img"
+              />
+            </figure>
+          </article>
+          <article class="fasilitas-item">
+            <figure>
+              <img
+                src="assets/images/kolam-renang.jpg"
+                alt="Kolam Renang"
+                width="500px"
+                class="fasilitas-img"
+              />
+            </figure>
+            <div>
+              <h3 class="fasilitas-item-title">Kolam Renang Luas</h3>
+              <p class="fasilitas-item-desc">
+                Nikmati kolam renang luas yang kami sediakan. Kolam renang kami
+                dilengkapi dengan fasilitas yang memadai, seperti tempat duduk
+                yang nyaman di sekitar kolam, pancuran air, dan area bermain
+                untuk anak-anak. Anda dan keluarga dapat bersantai dan menikmati
+                waktu berkualitas bersama di kolam renang kami yang bersih dan
+                aman.
+              </p>
+            </div>
+          </article>
+          <article class="fasilitas-item">
+            <div>
+              <h3 class="fasilitas-item-title">Pusat Kebugaran Modern</h3>
+              <p class="fasilitas-item-desc">
+                Anda dapat berolahraga di pusat kebugaran modern yang kami
+                sediakan. Pusat kebugaran kami dilengkapi dengan alat-alat
+                olahraga yang lengkap dan canggih, termasuk treadmill, sepeda
+                statis, angkat beban, dan berbagai peralatan kardio lainnya.
+                Selain itu, kami juga menyediakan instruktur kebugaran yang
+                berpengalaman untuk membantu Anda mencapai tujuan kebugaran
+                Anda. Dengan suasana yang nyaman dan fasilitas yang memadai,
+                pusat kebugaran kami adalah tempat yang sempurna untuk menjaga
+                kesehatan dan kebugaran Anda.
+              </p>
+            </div>
+            <figure>
+              <img
+                src="assets/images/pusat-kebugaran.jpg"
+                alt="Pusat Kebugaran"
+                width="500px"
+                class="fasilitas-img"
+              />
+            </figure>
+          </article>
+          <article class="fasilitas-item">
+            <figure>
+              <img
+                src="assets/images/resto.jpg"
+                alt="Restoran dan Cafe"
+                width="500px"
+                class="fasilitas-img"
+              />
+            </figure>
+            <div>
+              <h3 class="fasilitas-item-title">Restoran dan Cafe</h3>
+              <p class="fasilitas-item-desc">
+                Anda dapat menikmati makanan dan minuman di restoran dan cafe yang
+                kami sediakan. Restoran dan cafe kami menyediakan berbagai macam
+                makanan dan minuman, mulai dari hidangan lokal yang lezat hingga
+                hidangan internasional yang menggugah selera. Kami juga menawarkan
+                berbagai pilihan minuman, termasuk kopi, teh, jus segar, dan minuman
+                beralkohol. Dengan suasana yang nyaman dan pelayanan yang ramah,
+                restoran dan cafe kami adalah tempat yang sempurna untuk bersantai
+                dan menikmati waktu bersama keluarga dan teman-teman.
+              </p>
+            </div>
+          </article>
+          <article class="fasilitas-item">
+            <div>
+              <h3 class="fasilitas-item-title">Ruang Terbuka Hijau</h3>
+              <p class="fasilitas-item-desc">
+                Nikmati ruang terbuka hijau yang kami sediakan. Ruang terbuka
+                hijau kami sangat luas dan nyaman untuk berjalan-jalan atau
+                berolahraga. Anda dapat menikmati udara segar dan pemandangan
+                yang indah di sekitar area perumahan. Ruang terbuka hijau ini
+                juga dilengkapi dengan jalur jogging, area bermain anak, dan
+                tempat duduk yang nyaman untuk bersantai. Ini adalah tempat yang
+                sempurna untuk menghabiskan waktu bersama keluarga dan teman-teman,
+                serta menikmati keindahan alam di lingkungan yang aman dan terawat.
+              </p>
+            </div>
+            <figure>
+              <img
+                src="assets/images/ruang-terbuka.jpg"
+                alt="Ruang Terbuka Hijau"
+                width="500px"
+                class="fasilitas-img"
+              />
+            </figure>
+          </article>
+        </div>
       </section>
     </main>
     <footer>
-      <p>&copy; 2021 Property APP</p>
+      <p>&copy; 2024 Property APP</p>
     </footer>
     <script src="js/script.js"></script>
   </body>

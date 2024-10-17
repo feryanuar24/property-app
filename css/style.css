@@ -11,7 +11,7 @@
 /* Start: Global */
 body {
   background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -24,11 +24,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: bold;
+}
+
+.logo-app {
+  animation: fade-in-down 1s ease-in-out;
 }
 
 .nav-list {
   display: flex;
   list-style: none;
+  animation: fade-in-down 1s ease-in-out;
 }
 
 .nav-item {
@@ -57,11 +63,11 @@ header {
 
 .hero-text {
   color: var(--text-color);
-  margin-right: 300px;
+  margin-right: 200px;
 }
 
 .kontak-kami {
-  padding: 15px 50px;
+  padding: 0 10px;
   display: flex;
   align-items: center;
   background-color: var(--accent-color);
@@ -75,12 +81,16 @@ header {
   transition: all 0.3s ease-in-out;
 }
 
+.fa-phone {
+  margin-right: 10px;
+}
+
 .kontak-kami:hover {
   background-color: #c0392b;
 }
 
 .info-detail {
-  padding: 15px 50px;
+  padding: 0 30px;
   display: flex;
   align-items: center;
   background-color: var(--light-gray);
@@ -90,6 +100,7 @@ header {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .info-detail:hover {
@@ -104,12 +115,21 @@ header {
 .hero-img {
   border-radius: 30px;
 }
+
+.hero-title {
+  font-size: xx-large;
+}
+
+.hero-detail {
+  margin-bottom: 50px;
+}
 /* End: Hero */
 
 /* Start: Fasilitas List */
 .fasilitas-list {
-  padding: 30px 50px;
   color: var(--text-color);
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .fasilitas-item:nth-child(odd) {
@@ -124,17 +144,39 @@ header {
   font-size: xx-large;
   border-bottom: var(--primary-color) 10px solid;
   width: max-content;
+  margin-left: 530px;
+  margin-top: 100px;
+  animation: fade-in-up 3s ease-in-out;
+  color: var(--text-color);
 }
 
-.fasilitas-item {
+.fasilitas-item:nth-child(odd) {
   display: flex;
   justify-content: space-between;
+  width: 104%;
   margin-top: 20px;
 }
 
+.fasilitas-item:nth-child(even) {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 104%;
+  margin-left: -50px;
+}
+
+.fasilitas-item-title {
+  font-size: xx-large;
+}
+
+.fasilitas-item-desc {
+  font-size: large;
+  text-align: justify;
+}
+
 .fasilitas-img {
+  width: 600px;
   border-radius: 30px;
-  margin: 0px 50px;
 }
 /* End: Fasilitas List */
 
@@ -160,6 +202,7 @@ header {
   color: var(--text-color);
   font-weight: bold;
   font-size: large;
+  margin: 50px 0;
 }
 
 .icon-item {
@@ -255,13 +298,87 @@ header {
 }
 /* End: Contact Form Map */
 
+/* Start: List Tipe Rumah */
+.tipe-rumah-section {
+  padding: 30px 50px;
+  color: var(--text-color);
+}
+
+.tipe-rumah-title {
+  color: var(--text-color);
+  font-size: xx-large;
+  border-bottom: var(--primary-color) 10px solid;
+  width: max-content;
+  margin: 100px 500px;
+}
+.tipe-rumah-article {
+  display: flex;
+  margin-top: 20px;
+  padding: 0 50px;
+  animation: fade-in-right 3s ease-in-out;
+  color: var(--text-color);
+  text-align: justify;
+}
+
+.tipe-rumah-article:nth-child(odd) {
+  display: flex;
+  flex-direction: row-reverse;
+  animation: fade-in-left 3s ease-in-out;
+}
+
+.tipe-rumah-article-title {
+  font-size: x-large;
+}
+
+.tipe-rumah-img {
+  border-radius: 30px;
+  margin: 0px 50px;
+  width: 500px;
+}
+
+.tipe-rumah-container-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.tipe-rumah-container-item {
+  background-color: var(--light-gray);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tipe-rumah-icon {
+  font-size: 50px;
+  color: var(--primary-color);
+}
+
+.btn-selengkapnya {
+  background-color: var(--primary-color);
+  color: var(----background-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 50px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-selengkapnya:hover {
+  background-color: #2980b9;
+}
+/* End: List Tipe Rumah */
+
 /* Start: Footer */
 footer {
   background-color: var(--primary-color);
   color: var(----background-color);
   font-weight: bold;
-  padding: 20px 50px;
+  padding: 10px 50px;
   text-align: center;
+  margin-top: 100px;
 }
 /* End: Footer */
 
@@ -270,6 +387,17 @@ footer {
   from {
     opacity: 0;
     transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
   }
   to {
     opacity: 1;
@@ -321,6 +449,7 @@ footer {
     text-align: end;
     background-color: var(--light-gray);
     border-radius: 10px;
+    border: var(--primary-color) 1px solid;
   }
 
   .nav-item {
@@ -333,8 +462,7 @@ footer {
   .icon-list {
     font-size: 20px;
     color: var(--text-color);
-    border: var(--text-color) 1px solid;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: none;
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
@@ -350,6 +478,13 @@ footer {
   .hero {
     flex-direction: column-reverse;
     align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .btn-group {
+    display: flex;
+    justify-content: center;
   }
 
   .hero-text {
@@ -375,16 +510,29 @@ footer {
 
   .fasilitas-title {
     font-size: x-large;
+    margin: auto;
+    margin-top: 100px;
   }
 
   .fasilitas-item {
     flex-direction: column;
     align-items: center;
+    margin-left: -50px;
+  }
+
+  .fasilitas-item-title {
+    width: 140%;
+  }
+
+  .fasilitas-item-desc {
+    width: 140%;
     border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 50px;
   }
 
   .fasilitas-img {
     width: 300px;
+    margin-left: 95px;
   }
 
   .fasilitas-item:nth-child(odd) {
@@ -399,10 +547,16 @@ footer {
 
   .about-us-content {
     margin: 10px;
+    margin-top: 100px;
   }
 
   .contact-icon {
     flex-direction: column;
+    margin: 0;
+  }
+
+  .contact-item {
+    margin-bottom: 50px;
   }
 
   .contact-form-map {
@@ -419,6 +573,37 @@ footer {
     width: 120%;
     height: 500px;
     margin-top: 50px;
+  }
+
+  .tipe-rumah-title {
+    margin: 50px 0;
+    text-align: center;
+    width: 81%;
+    font-size: x-large;
+    margin-left: 40px;
+  }
+
+  .tipe-rumah-article {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    padding: 0;
+    margin-bottom: 100px;
+  }
+
+  .tipe-rumah-article:nth-child(odd) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .tipe-rumah-article:nth-child(even) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tipe-rumah-img:nth-child(odd) {
+    margin-left: -25px;
+    width: 300px;
   }
 }
 
@@ -450,4 +635,13 @@ footer {
   font-weight: bold;
   text-align: center;
 }
+
+.ml {
+  margin-left: -50px;
+}
+
+.mr {
+  margin-right: -50px;
+}
+
 /* End: Other */
