@@ -492,6 +492,91 @@ header {
 }
 /* End: Detail Rumah */
 
+/* Start: All Blog */
+.blog-and-sidebar {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 200px;
+  margin: 50px;
+  text-align: justify;
+  color: var(--text-color);
+}
+
+.blog-img {
+  border-radius: 30px;
+}
+
+.blog-item-title {
+  font-size: xx-large;
+  margin-bottom: 20px;
+}
+
+.blog-item {
+  border-bottom: 1px solid var(--light-gray);
+  margin-bottom: 50px;
+  animation: fade-in-right 3s ease-in-out;
+}
+
+.blog-search {
+  padding: 10px 30px;
+  color: var(--text-color);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--light-gray);
+  outline: none;
+}
+
+.lastest-post-img {
+  width: 300px;
+  border-radius: 30px;
+}
+
+.blog-search-button {
+  position: absolute;
+  right: 80px;
+  top: 10px;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.lastest-post-item {
+  border-bottom: 1px solid var(--light-gray);
+  margin-bottom: 50px;
+  animation: fade-in-left 3s ease-in-out;
+}
+/* End: All Blog */
+
+/* Start: Detail Blog */
+.detail-blog-container {
+  margin-top: 30px;
+}
+
+.detail-blog-img {
+  width: 500px;
+  border-radius: 30px;
+}
+
+.all-detail-blog {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  margin: 50px 50px;
+  color: var(--text-color);
+  gap: 100px;
+}
+
+.detail-blog-main {
+  margin-top: 100px;
+  text-align: justify;
+  animation: fade-in-right 3s ease-in-out;
+}
+
+.detail-blog-title {
+  font-size: xx-large;
+  margin-bottom: 20px;
+}
+/* End: Detail Blog */
+
 /* Start: Footer */
 footer {
   background-color: var(--primary-color);
@@ -802,6 +887,30 @@ footer {
     display: flex;
     flex-direction: column;
   }
+
+  .blog-and-sidebar {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .blog-search-button {
+    right: 100px;
+  }
+
+  .blog-item {
+    text-align: left;
+  }
+
+  .all-detail-blog {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .detail-blog-img {
+    width: 300px;
+  }
 }
 
 /* Start: Other */
@@ -843,6 +952,10 @@ footer {
 
 .flex-direction-row-reverse {
   flex-direction: row-reverse;
+}
+
+.relative {
+  position: relative;
 }
 
 /* End: Other */

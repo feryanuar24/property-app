@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tipe Rumah</title>
+    <title>Detail Blog</title>
     <link rel="stylesheet" href="css/style.css" />
     <script
       src="https://kit.fontawesome.com/111c3a0f57.js"
@@ -17,27 +17,25 @@
         <ul class="nav-list" id="nav-list">
           <li><a href="index.html" class="nav-item">Beranda</a></li>
           <li>
-            <a href="tipe-rumah.html" class="nav-item active">Tipe Rumah</a>
+            <a href="tipe-rumah.html" class="nav-item">Tipe Rumah</a>
           </li>
           <li>
             <a href="tentang-kami.html" class="nav-item">Tentang Kami</a>
           </li>
           <li><a href="kontak.html" class="nav-item">Kontak</a></li>
-          <li><a href="blog.html" class="nav-item">Blog</a></li>
+          <li><a href="blog.html" class="nav-item active">Blog</a></li>
         </ul>
       </nav>
       <button class="icon-list" onclick="toggleNavbar()">
         <i class="fa-solid fa-list"></i>
       </button>
     </header>
-    <main class="tipe-rumah-main">
-      <section class="banner">
-        <h2>Tipe Rumah</h2>
-      </section>
-      <section>
-        <h2 class="tipe-rumah-title">Hunian Bergaya Modern</h2>
-        <div id="all-tipe-rumah-container"></div>
-      </section>
+    <main class="all-detail-blog">
+      <div id="detail-blog-container" class="detail-blog-container"></div>
+      <div id="blog-sidebar">
+        <h3>Postingan Terbaru</h3>
+        <div id="lastest-post"></div>
+      </div>
     </main>
     <footer>
       <p>&copy; 2024 Property APP</p>

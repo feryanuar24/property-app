@@ -1,4 +1,4 @@
-// Navbar fixed when scroll
+// All: Navbar fixed when scroll
 window.onscroll = () => {
   let navbar = document.getElementById("navbar");
   if (window.scrollY > 0) {
@@ -8,7 +8,7 @@ window.onscroll = () => {
   }
 };
 
-// Navbar toggle
+// All: Navbar toggle
 const toggleNavbar = () => {
   let navbar = document.getElementById("nav-list");
   if (navbar.style.display === "block") {
@@ -18,7 +18,71 @@ const toggleNavbar = () => {
   }
 };
 
-// Tipe Rumah
+// Fasilitas: Data
+const fasilitasData = [
+  {
+    title: "Keamanan Terjamin",
+    detail:
+      "Keamanan adalah prioritas kami. Kami menyediakan CCTV di seluruh area perumahan untuk memastikan keamanan dan kenyamanan Anda. Selain itu, kami juga memiliki petugas keamanan yang berjaga 24 jam setiap hari untuk memberikan perlindungan ekstra bagi Anda dan keluarga.",
+    img: "assets/images/keamanan.jpg",
+  },
+  {
+    title: "Kolam Renang Luas",
+    detail:
+      "Nikmati kolam renang luas yang kami sediakan. Kolam renang kami dilengkapi dengan fasilitas yang memadai, seperti tempat duduk yang nyaman di sekitar kolam, pancuran air, dan area bermain untuk anak-anak. Anda dan keluarga dapat bersantai dan menikmati waktu berkualitas bersama di kolam renang kami yang bersih dan aman.",
+    img: "assets/images/kolam-renang.jpg",
+  },
+  {
+    title: "Pusat Kebugaran Modern",
+    detail:
+      "Anda dapat berolahraga di pusat kebugaran modern yang kami sediakan. Pusat kebugaran kami dilengkapi dengan alat-alat olahraga yang lengkap dan canggih, termasuk treadmill, sepeda statis, angkat beban, dan berbagai peralatan kardio lainnya Selain itu, kami juga menyediakan instruktur kebugaran yang berpengalaman untuk membantu Anda mencapai tujuan kebugaran Anda. Dengan suasana yang nyaman dan fasilitas yang memadai, pusat kebugaran kami adalah tempat yang sempurna untuk menjaga kesehatan dan kebugaran Anda.",
+    img: "assets/images/pusat-kebugaran.jpg",
+  },
+  {
+    title: "Restoran dan Cafe",
+    detail:
+      "Anda dapat menikmati makanan dan minuman di restoran dan cafe yang kami sediakan. Restoran dan cafe kami menyediakan berbagai macam makanan dan minuman, mulai dari hidangan lokal yang lezat hingga hidangan internasional yang menggugah selera. Kami juga menawarkan berbagai pilihan minuman, termasuk kopi, teh, jus segar, dan minuman beralkohol. Dengan suasana yang nyaman dan pelayanan yang ramah, restoran dan cafe kami adalah tempat yang sempurna untuk bersantai dan menikmati waktu bersama keluarga dan teman-teman.",
+    img: "assets/images/resto.jpg",
+  },
+  {
+    title: "Ruang Terbuka Hijau",
+    detail:
+      "Nikmati ruang terbuka hijau yang kami sediakan. Ruang terbuka hijau kami sangat luas dan nyaman untuk berjalan-jalan atau berolahraga. Anda dapat menikmati udara segar dan pemandangan yang indah di sekitar area perumahan. Ruang terbuka hijau ini juga dilengkapi dengan jalur jogging, area bermain anak, dan tempat duduk yang nyaman untuk bersantai. Ini adalah tempat yang sempurna untuk menghabiskan waktu bersama keluarga dan teman-teman, serta menikmati keindahan alam di lingkungan yang aman dan terawat.",
+    img: "assets/images/ruang-terbuka.jpg",
+  },
+];
+
+// Fasilitas: Container
+const fasilitasList = document.getElementById("fasilitas-list");
+
+// Fasilitas: Render Article
+const renderFasilitasArticle = () => {
+  fasilitasData.forEach((fasilitas, index) => {
+    fasilitasList.innerHTML += `
+        ${
+          index % 2 === 0
+            ? `<article class="fasilitas-item">`
+            : `<article class="fasilitas-item flex-direction-row-reverse">`
+        }
+            <div>
+              <h3 class="fasilitas-item-title">${fasilitas.title}</h3>
+                <p class="fasilitas-item-desc">
+                ${fasilitas.detail}
+                </p>
+            </div>
+            <figure>
+              <img
+                src=${fasilitas.img}
+                alt=${fasilitas.title}
+                class="fasilitas-img"
+              />
+            </figure>
+          </article>
+          `;
+  });
+};
+
+// Tipe Rumah: Data
 const tipeRumahData = [
   {
     tipe: "Rumah Minimalis",
@@ -82,10 +146,12 @@ const tipeRumahData = [
   },
 ];
 
+// Tipe Rumah: Container
 const allTipeRumahContainer = document.getElementById(
   "all-tipe-rumah-container"
 );
 
+// Tipe Rumah: Render Article
 const renderTipeRumahArticle = () => {
   tipeRumahData.forEach((tipeRumah, index) => {
     allTipeRumahContainer.innerHTML += `
@@ -150,81 +216,21 @@ const renderTipeRumahArticle = () => {
   });
 };
 
-// Fasilitas
-const fasilitasData = [
-  {
-    title: "Keamanan Terjamin",
-    detail:
-      "Keamanan adalah prioritas kami. Kami menyediakan CCTV di seluruh area perumahan untuk memastikan keamanan dan kenyamanan Anda. Selain itu, kami juga memiliki petugas keamanan yang berjaga 24 jam setiap hari untuk memberikan perlindungan ekstra bagi Anda dan keluarga.",
-    img: "assets/images/keamanan.jpg",
-  },
-  {
-    title: "Kolam Renang Luas",
-    detail:
-      "Nikmati kolam renang luas yang kami sediakan. Kolam renang kami dilengkapi dengan fasilitas yang memadai, seperti tempat duduk yang nyaman di sekitar kolam, pancuran air, dan area bermain untuk anak-anak. Anda dan keluarga dapat bersantai dan menikmati waktu berkualitas bersama di kolam renang kami yang bersih dan aman.",
-    img: "assets/images/kolam-renang.jpg",
-  },
-  {
-    title: "Pusat Kebugaran Modern",
-    detail:
-      "Anda dapat berolahraga di pusat kebugaran modern yang kami sediakan. Pusat kebugaran kami dilengkapi dengan alat-alat olahraga yang lengkap dan canggih, termasuk treadmill, sepeda statis, angkat beban, dan berbagai peralatan kardio lainnya Selain itu, kami juga menyediakan instruktur kebugaran yang berpengalaman untuk membantu Anda mencapai tujuan kebugaran Anda. Dengan suasana yang nyaman dan fasilitas yang memadai, pusat kebugaran kami adalah tempat yang sempurna untuk menjaga kesehatan dan kebugaran Anda.",
-    img: "assets/images/pusat-kebugaran.jpg",
-  },
-  {
-    title: "Restoran dan Cafe",
-    detail:
-      "Anda dapat menikmati makanan dan minuman di restoran dan cafe yang kami sediakan. Restoran dan cafe kami menyediakan berbagai macam makanan dan minuman, mulai dari hidangan lokal yang lezat hingga hidangan internasional yang menggugah selera. Kami juga menawarkan berbagai pilihan minuman, termasuk kopi, teh, jus segar, dan minuman beralkohol. Dengan suasana yang nyaman dan pelayanan yang ramah, restoran dan cafe kami adalah tempat yang sempurna untuk bersantai dan menikmati waktu bersama keluarga dan teman-teman.",
-    img: "assets/images/resto.jpg",
-  },
-  {
-    title: "Ruang Terbuka Hijau",
-    detail:
-      "Nikmati ruang terbuka hijau yang kami sediakan. Ruang terbuka hijau kami sangat luas dan nyaman untuk berjalan-jalan atau berolahraga. Anda dapat menikmati udara segar dan pemandangan yang indah di sekitar area perumahan. Ruang terbuka hijau ini juga dilengkapi dengan jalur jogging, area bermain anak, dan tempat duduk yang nyaman untuk bersantai. Ini adalah tempat yang sempurna untuk menghabiskan waktu bersama keluarga dan teman-teman, serta menikmati keindahan alam di lingkungan yang aman dan terawat.",
-    img: "assets/images/ruang-terbuka.jpg",
-  },
-];
-
-const fasilitasList = document.getElementById("fasilitas-list");
-
-const renderFasilitasArticle = () => {
-  fasilitasData.forEach((fasilitas, index) => {
-    fasilitasList.innerHTML += `
-        ${
-          index % 2 === 0
-            ? `<article class="fasilitas-item">`
-            : `<article class="fasilitas-item flex-direction-row-reverse">`
-        }
-            <div>
-              <h3 class="fasilitas-item-title">${fasilitas.title}</h3>
-                <p class="fasilitas-item-desc">
-                ${fasilitas.detail}
-                </p>
-            </div>
-            <figure>
-              <img
-                src=${fasilitas.img}
-                alt=${fasilitas.title}
-                class="fasilitas-img"
-              />
-            </figure>
-          </article>
-          `;
-  });
-};
-
-// Redirect to Detail Rumah
+// Detail Rumah: Redirect
 const detailRumah = (tipe) => {
   window.location.href = `detail-rumah.html?tipe=${tipe}`;
 };
 
-// Get URL Parameter
+// Detail Rumah: Get URL Parameter
 const getParameterByName = (name) => {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(name);
 };
 
+// Detail Rumah: Container
 const detailRumahContainer = document.getElementById("detail-rumah-container");
 
+// Detail Rumah: Render
 const renderDetailRumah = () => {
   const tipe = getParameterByName("tipe");
   const selectedTipeRumah = tipeRumahData.find(
@@ -333,6 +339,177 @@ const renderDetailRumah = () => {
   });
 };
 
+// Blog: Data
+const blog = [
+  {
+    title: "Tips Memilih Tipe Rumah yang Tepat untuk Keluarga",
+    date: "12 Agustus 2021",
+    img: "/assets/images/rumah-tipe-1.png",
+    content:
+      "Memilih tipe rumah yang tepat untuk keluarga adalah keputusan penting yang memerlukan pertimbangan matang. Pertama, tentukan kebutuhan ruang berdasarkan jumlah anggota keluarga dan aktivitas sehari-hari. Rumah dengan banyak kamar tidur dan ruang keluarga yang luas mungkin lebih cocok untuk keluarga besar. Selain itu, perhatikan juga lokasi rumah yang strategis, dekat dengan fasilitas umum seperti sekolah, rumah sakit, dan pusat perbelanjaan. Jangan lupa untuk mempertimbangkan anggaran yang tersedia dan pastikan rumah yang dipilih sesuai dengan kemampuan finansial Anda. Dengan mempertimbangkan faktor-faktor ini, Anda dapat menemukan rumah yang ideal untuk keluarga Anda.",
+  },
+  {
+    title: "5 Faktor yang Mempengaruhi Harga Rumah",
+    date: "5 Agustus 2021",
+    img: "/assets/images/rumah-tipe-2.png",
+    content:
+      "Harga rumah dipengaruhi oleh berbagai faktor. Pertama, lokasi adalah faktor utama yang menentukan harga rumah. Rumah yang terletak di pusat kota atau dekat dengan fasilitas umum biasanya memiliki harga yang lebih tinggi. Kedua, ukuran dan luas tanah juga mempengaruhi harga. Semakin besar rumah dan tanahnya, semakin tinggi harganya. Ketiga, kondisi bangunan dan usia rumah juga berperan. Rumah baru atau yang telah direnovasi biasanya lebih mahal. Keempat, fasilitas tambahan seperti kolam renang, taman, atau garasi juga dapat meningkatkan harga rumah. Terakhir, permintaan pasar dan tren ekonomi juga mempengaruhi harga rumah. Dengan memahami faktor-faktor ini, Anda dapat lebih bijak dalam menentukan harga rumah yang sesuai.",
+  },
+  {
+    title: "Inspirasi Desain Interior Rumah Minimalis",
+    date: "29 Juli 2021",
+    img: "/assets/images/rumah-tipe-3.png",
+    content:
+      "Desain interior rumah minimalis semakin populer karena kesederhanaannya yang elegan. Untuk menciptakan tampilan minimalis, pilihlah furnitur dengan desain sederhana dan warna netral seperti putih, abu-abu, atau hitam. Hindari penggunaan dekorasi yang berlebihan dan pilihlah aksesoris yang fungsional. Pencahayaan juga memainkan peran penting dalam desain minimalis. Gunakan pencahayaan alami sebanyak mungkin dan tambahkan lampu dengan desain modern untuk memberikan kesan hangat. Selain itu, pastikan ruang tetap rapi dan terorganisir dengan baik. Dengan mengikuti prinsip-prinsip ini, Anda dapat menciptakan interior rumah minimalis yang nyaman dan estetis.",
+  },
+  {
+    title: "Tips Merawat Taman Rumah agar Tetap Indah",
+    date: "22 Juli 2021",
+    img: "/assets/images/rumah-tipe-4.png",
+    content:
+      "Merawat taman rumah agar tetap indah memerlukan perhatian dan perawatan rutin. Pertama, pastikan untuk menyiram tanaman secara teratur, terutama pada musim kemarau. Gunakan pupuk organik untuk memberikan nutrisi yang dibutuhkan tanaman. Selain itu, lakukan pemangkasan secara berkala untuk menjaga bentuk tanaman dan mencegah pertumbuhan yang tidak terkendali. Jangan lupa untuk membersihkan gulma yang dapat mengganggu pertumbuhan tanaman. Tambahkan elemen dekoratif seperti batu hias, patung, atau lampu taman untuk mempercantik tampilan taman. Dengan perawatan yang tepat, taman rumah Anda akan selalu terlihat indah dan asri.",
+  },
+];
+
+// Blog: All Blog Container
+const blogContainer = document.getElementById("all-blogs-container");
+
+// Blog: Render Article
+const renderBlogArticle = () => {
+  blog.forEach((blog) => {
+    blogContainer.innerHTML += `
+        <article class="blog-item">
+          <img
+            src=${blog.img}
+            alt=${blog.title}
+            class="blog-img"
+            width="300"
+          />
+          <div>
+            <h3 class="blog-item-title">${blog.title}</h3>
+            <p class="blog-item-date">
+            <i class="fa-regular fa-calendar"></i>
+            ${blog.date}
+            </p>
+            <p class="blog-item-content">
+              ${blog.content.slice(0, 200)}...
+            </p>
+            <button class="btn-selengkapnya" onclick="blogDetail('${blog.title
+              .toLowerCase()
+              .replace(/\s+/g, "-")}')">Selengkapnya</button>
+          </div>
+        </article>
+          `;
+  });
+};
+
+// Blog: Lastest Post Container
+const lastestPostContainer = document.getElementById("lastest-post");
+
+// Blog: Render Lastest Post
+const renderLastestPost = () => {
+  blog.slice(0, 3).forEach((blog) => {
+    lastestPostContainer.innerHTML += `
+        <article class="lastest-post-item">
+          <img
+            src=${blog.img}
+            alt=${blog.title}
+            class="lastest-post-img"
+            width="300"
+          />
+          <div>
+            <h3 class="lastest-post-item-title">${blog.title}</h3>
+            <p class="lastest-post-item-date">
+            <i class="fa-regular fa-calendar"></i>
+            ${blog.date}
+            </p>
+            <p class="lastest-post-item-content">
+              ${blog.content.slice(0, 30)}...
+            </p>
+            <button class="btn-selengkapnya" onclick="blogDetail('${blog.title
+              .toLowerCase()
+              .replace(/\s+/g, "-")}')">Selengkapnya</button>
+          </div>
+        </article>
+          `;
+  });
+};
+
+const blogSearch = () => {
+  const searchInput = document.getElementById("blog-search").value;
+  const searchResult = blog.filter((blog) =>
+    blog.title.toLowerCase().includes(searchInput.toLowerCase())
+  );
+
+  blogContainer.innerHTML = "";
+  searchResult.forEach((blog) => {
+    blogContainer.innerHTML += `
+        <article class="blog-item">
+          <img
+            src=${blog.img}
+            alt=${blog.title}
+            class="blog-img"
+            width="300"
+          />
+          <div>
+            <h3 class="blog-item-title">${blog.title}</h3>
+            <p class="blog-item-date">
+            <i class="fa-regular fa-calendar"></i>
+            ${blog.date}
+            </p>
+            <p class="blog-item-content">
+              ${blog.content.slice(0, 200)}...
+            </p>
+            <button class="btn-selengkapnya" onclick="blogDetail('${blog.title
+              .toLowerCase()
+              .replace(/\s+/g, "-")}')">Selengkapnya</button>
+          </div>
+        </article>
+          `;
+  });
+};
+
+// Blog: Redirect
+const blogDetail = (title) => {
+  window.location.href = "detail-blog.html?title=" + title;
+};
+
+// Blog: Get URL Parameter
+const getBlogParameterByName = (name) => {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(name);
+};
+
+// Blog: Container
+const detailBlogContainer = document.getElementById("detail-blog-container");
+
+// Blog: Render
+const renderDetailBlog = () => {
+  const title = getBlogParameterByName("title");
+  const selectedBlog = blog.find(
+    (blog) => title === blog.title.toLowerCase().replace(/\s+/g, "-")
+  );
+
+  detailBlogContainer.innerHTML = `
+    <section class="banner">
+        <h2>${selectedBlog.title}</h2>
+      </section>
+      <section class="detail-blog-main">
+        <img
+          src=${selectedBlog.img}
+          alt=${selectedBlog.title}
+          class="detail-blog-img"
+        />
+        <div class="detail-blog-text-group">
+          <h3 class="detail-blog-title">${selectedBlog.title}</h3>
+          <p>
+            ${selectedBlog.content}
+          </p>
+        </div>
+      </section>
+  `;
+};
+
 // Render Tipe Rumah and Fasilitas Article
 document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("all-tipe-rumah-container")) {
@@ -343,5 +520,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   if (document.getElementById("detail-rumah-container")) {
     renderDetailRumah();
+  }
+  if (document.getElementById("all-blogs-container")) {
+    renderBlogArticle();
+  }
+  if (document.getElementById("lastest-post")) {
+    renderLastestPost();
+  }
+  if (document.getElementById("detail-blog-container")) {
+    renderDetailBlog();
   }
 });
